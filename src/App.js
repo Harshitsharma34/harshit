@@ -5,6 +5,7 @@ import DumpardDiv from './App/dumpyard-div';
 import About from './App/about';
 import Contact from './App/contact';
 import MoreWorkMain from './App/more-work-main';
+import Work from './App/work';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Nav/>
         <Header/>
         <DumpardDiv/>
+        <Work/>
         <MoreWorkMain/>
         <About/>
         <Contact/>
