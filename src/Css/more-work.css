@@ -1,0 +1,102 @@
+.more-work{
+    height:110vh;
+
+    background-color: #18152E;
+   
+}
+.projects-flexbox {
+    display: inline-flex;
+    flex-wrap: wrap;
+    left: 7%;
+    position: relative;
+    top: -8%;
+}
+
+.projects-flexbox > div {
+    margin: 10px;
+}
+
+.more-work-heading{
+    -webkit-text-stroke-width: .7px;
+    -webkit-text-fill-color: transparent;
+    font-family: 'BasementGrotesk';
+    color: white;
+    font-size: 65px;
+    width: 50%;
+    position: relative;
+    left: 8%;
+    top: 12%;
+    padding-top: 5%;
+}
+
+.project{
+    width: 380px;
+    height: 400px;
+    background-color: #171429;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+
+.project-image{
+    background-color: blueviolet;
+    width: 380px;
+    height: 220px;
+    border-radius: 20px;
+}
+
+.project-name{
+    font-size: 25px;
+    width: 24vw;
+    color: #C7CCE7;
+    font-family: 'HelveticaNowDisplayRegular';
+}
+
+.project-description
+{
+    font-size: 18px;
+    color: #8A829F;
+    width: 24vw;
+    font-family: 'HelveticaNowDisplayRegular';
+    position: relative;
+    top: -2%;
+}
+.lock{
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 4px;
+}
+
+
+.password-input{
+    background-color: transparent;
+    border: 2px solid rgb(255, 255, 255,0.2);
+    padding: 10px 10px;
+    border-radius: 30px;
+    font-family: 'HelveticaNowDisplayRegular';
+    color: white;
+    font-size: 18px;
+    width:8em
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(255, 255, 255,0.1);
+    opacity: 1; /* Firefox */
+    padding: 10px;
+  }
+
+  .arrow{
+    float:right ;
+    top: 10px;
+    position: relative ;
+    
+  }
+.cantshow-img{
+    float: right;
+    width: 30%;
+    right: 20%;
+    top: -18%;
+    position: relative;
+   
+}

@@ -1,0 +1,152 @@
+.contact-div{
+  padding-bottom: 50px;
+}
+.contact-div h2{
+    font-family: 'BasementGrotesk';
+    font-size: 65px;
+    color: white;
+    text-align: left;
+    width: 45%;
+    position: relative;
+    left: 8%;
+}
+
+.container-1{
+    display: inline-block;
+    position: relative;
+    left: 7.5%;
+    width: 25%;
+    padding: 15px 15px;
+    color: white;
+    font-family: 'HelveticaNowDisplay';
+    margin:10px 10px;
+    background-color: #121222;
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.2);    
+}
+
+.container-2{
+  position: relative;
+  left: 7.5%;
+  display: inline-block;
+  width: 25%;
+  padding: 15px 15px;
+  color: white;
+  font-family: 'HelveticaNowDisplay';
+  margin:10px 10px;
+  background-color: #121222;
+  border:1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
+.box-medium
+{
+    width:100px;
+    height: 100px;
+    background-color:#7140F2 ;
+    border-radius: 20px;
+}
+.box-instagram
+{
+    width:100px;
+    height: 100px;
+    background-color:#7140F2 ;
+    border-radius: 20px;
+}
+.box-linkedin
+{
+    width:100px;
+    height: 100px;
+    background-color:#7140F2 ;
+    border-radius: 20px;
+}
+.box-dribbble
+{
+    width:100px;
+    height: 100px;
+    background-color:#7140F2 ;
+    border-radius: 20px;
+}
+.box-hireme
+{
+    width:100px;
+    height: 100px;
+    background-color:#7140F2 ;
+    border-radius: 20px;
+}
+.box-email
+{
+    width:100px;
+    height: 100px;
+    background-color:#7140F2 ;
+    border-radius: 20px;
+}
+.flex-box{
+  display: flex;
+  font-family:  'HelveticaNowDisplay';
+  font-size: 1.2em;
+}
+.main-text{
+  color:#A19AB1;
+  padding: 10px 20px;
+}
+
+
+
+
+.medium:hover
+{
+  border:1px solid rgba(255, 255, 255, 0);
+    box-shadow: 0 1px 30px rgba(113, 64, 242, 0.8);
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+}
+
+.instagram:hover
+{
+  border:1px solid rgba(255, 255, 255, 0);
+  box-shadow: 0 1px 30px rgba(113, 64, 242, 0.8);
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+}
+    
+.linkedin:hover
+{
+  border:1px solid rgba(255, 255, 255, 0);
+  box-shadow: 0 1px 30px rgba(113, 64, 242, 0.8);
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+}
+    
+.dribbble:hover
+{
+  border:1px solid rgba(255, 255, 255, 0);
+  box-shadow: 0 1px 30px rgba(113, 64, 242, 0.8);
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+}
+    
+.hireme:hover
+{
+  border:1px solid rgba(255, 255, 255, 0);
+  box-shadow: 0 1px 30px rgba(113, 64, 242, 0.8);
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+}
+    
+.email:hover
+{
+  border:1px solid rgba(255, 255, 255, 0);
+  box-shadow: 0 1px 30px rgba(113, 64, 242, 0.8);
+    cursor: pointer;
+    transition: all 0.2s ease 0s;
+}
+    
+
+@media (max-width : 1080px) {
+  .container-1{
+   width: 24%;
+  }
+  .container-2{
+    width: 24%;
+   }
+}

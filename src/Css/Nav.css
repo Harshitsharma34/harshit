@@ -1,0 +1,63 @@
+.nav-list
+{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        float: right;
+        font-family: 'HelveticaNowDisplayRegular';
+        font-style:medium ;
+        position: relative;
+        margin-top: 30px;
+        margin-right: 80px;
+        overflow: hidden;
+    
+}
+.logo{
+  position: absolute;
+  float: left;
+  width:  100px;
+  height: 100px;
+  background-position: 50% 50%;
+  background-repeat:   no-repeat;
+  background-size:     cover;
+  margin:0.5%;
+  margin-left: 7%;
+}
+
+@font-face {
+    font-family: 'HelveticaNowDisplay';
+    src: url(../Assets/Fonts/HelveticaNowDisplay-Medium.woff2);
+}
+
+@font-face {
+  font-family: 'HelveticaNowDisplayRegular';
+  src: url(../Assets/Fonts/HelveticaNowDisplay-Regular.otf);
+}
+
+ul.nav-list li{
+    display: inline;
+}
+
+.nav-list li a{
+    text-decoration: none;
+    text-align: center;
+  padding: 14px 36px;
+  font-size: 20px;
+
+}
+.nav-list li a:hover {
+color: purple;
+}
+
+.navbar-container{
+  padding-top: 10px;
+}
+
+li a:hover{
+  color:rgb(133, 133, 133);
+
+}
+li a:active{
+  color:rgb(255, 255, 255);
+  
+}

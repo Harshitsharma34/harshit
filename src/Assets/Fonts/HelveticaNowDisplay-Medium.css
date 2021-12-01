@@ -1,0 +1,9 @@
+/* Webfont: HelveticaNowDisplay-Medium */@font-face {
+    font-family: 'HelveticaNowDisplayMedium';
+    src: url('HelveticaNowDisplay-Medium.woff2') format('woff2'), /* Modern Browsers */
+         url('HelveticaNowDisplay-Medium.otf') format('opentype'); /* Safari, Android, iOS */
+             font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+}
+

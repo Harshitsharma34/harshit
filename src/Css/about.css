@@ -1,0 +1,61 @@
+.about-heading{
+    font-family: 'BasementGrotesk';
+    color: white;
+    font-size: 65px;
+}
+.about-div{
+    justify-content: space-around;
+    text-align: left;
+    padding: 2% 8% 2%;
+    padding-bottom: 4%;
+
+
+}
+
+.about-block{
+    height:85vh;
+    background-color: #170F2E;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    
+}
+.about-image{
+
+    float: right;
+    display: flex;
+    height: 79vh;
+    width: 79vh;
+    margin-top: 21px;
+    margin-right: 21px;
+    background-color:#000000;
+    border-radius: 20px;
+    background-color: #7140F2;
+}
+.about-block h3{
+
+   right:35%;
+   height: 10%;
+   color: #FF7EAC;
+   font-size: 28px;
+   font-family: 'HelveticaNowDisplay'; 
+
+   position: relative;
+ 
+}
+.about-block p{
+    position: relative;
+    top: -5%;
+    right: 8%;
+    font-family: 'HelveticaNowDisplay';
+    color: white;
+    font-size: 19px;
+    display: -webkit-box;   
+    -webkit-line-clamp: 8;   
+    -webkit-box-orient: vertical;     
+    overflow: hidden; 
+    width:35%;
+    margin:8%;
+}

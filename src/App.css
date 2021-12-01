@@ -1,0 +1,10 @@
+
+    ::-webkit-scrollbar {
+        width: 10px;
+
+        background-color: rgba(226, 226, 226, 0.226);
+    }
+    ::-webkit-scrollbar-thumb {
+        background: rgba(180, 166, 214, 0.452);
+        border-radius: 10px;
+      }
