@@ -1,0 +1,66 @@
+.dumpyard-text{
+    font-family: 'BasementGrotesk';
+    position: relative;
+    float: left;
+    top: 15vh;
+    right: 7%;
+    font-size: 4em;
+    color: white;
+}
+.dumpyard p{
+    color:rgb(115, 112, 150);
+    font-family: 'HelveticaNowDisplayRegular';
+    position: relative;
+    top: 25vh;
+    right: 34.5vw;
+    float: left;
+    font-size: 1.4em;
+    
+}
+
+
+.logo{
+    position: relative;
+    float: left;
+    width:  100px;
+    height: 100px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin:0.5%;
+    margin-left: 7%;
+  }
+  .nav .backtohome{
+    padding: 14px 28px;
+    text-decoration: none;
+    color: white;
+   font-family: 'HelveticaNowDisplayRegular';
+   font-size: 1.1em;
+    border-radius: 8px;
+    border:1px solid rgba(255, 255, 255, 0.26);
+    float: right;
+    margin-right: 10%;
+    margin-top: 20px;
+  }
+  
+  @font-face {
+      font-family: 'HelveticaNowDisplay';
+      src: url(../Assets/Fonts/HelveticaNowDisplay-Medium.woff2);
+  }
+  
+  @font-face {
+    font-family: 'HelveticaNowDisplayRegular';
+    src: url(../Assets/Fonts/HelveticaNowDisplay-Regular.otf);
+  }
+  
+  .navbar-container{
+    padding-top: 10px;
+  }
+  
+  .nav .backtohome:hover{
+    background-color: #7140F2;
+    color: white;
+    transition: 300ms;
+    border: 1px solid transparent;
+  }
+  

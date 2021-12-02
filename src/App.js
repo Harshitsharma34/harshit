@@ -1,30 +1,18 @@
-import './App.css';
-import Nav from '../src/App/Navigation'
-import Header from '../src/App/Header.jsx'
-import DumpardDiv from './App/dumpyard-div';
-import About from './App/about';
-import Contact from './App/contact';
-import MoreWorkMain from './App/more-work-main';
-import Work from './App/work';
+import "./App.css";
+import Main from "./App/Main";
+import { BrowserRouter, Route, Routes} from "react-router-dom";
+import Dumpyard from "./App/dumpyard";
 
 function App() {
   return (
     <div className="App">
-      
-        <Nav/>
-        <Header/>
-        <DumpardDiv/>
-        <Work/>
-        <MoreWorkMain/>
-        <About/>
-        <Contact/>
-  
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Main/>} />
+          <Route path="dumpyard" element={<Dumpyard/>} />
+        </Routes>
+      </BrowserRouter>
     </div>
-   
-    
-    
-    
- 
   );
 }
 
