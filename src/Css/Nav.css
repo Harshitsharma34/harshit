@@ -11,7 +11,7 @@
         margin-right: 80px;
         overflow: hidden;
     
-}
+} 
 .logo{
   position: absolute;
   float: left;
@@ -43,21 +43,19 @@ ul.nav-list li{
     text-align: center;
   padding: 14px 36px;
   font-size: 20px;
+ 
 
 }
-.nav-list li a:hover {
-color: purple;
-}
+
 
 .navbar-container{
   padding-top: 10px;
 }
-
-li a:hover{
-  color:rgb(133, 133, 133);
-
+.nav-list:hover li{
+  opacity:0.4;
+  transition: 200ms;
 }
-li a:active{
-  color:rgb(255, 255, 255);
-  
+.nav-list li:hover{
+  opacity:1;
+  transition: 200ms
 }
