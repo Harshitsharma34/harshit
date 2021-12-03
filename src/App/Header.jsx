@@ -11,12 +11,13 @@ function Header() {
                          <div className="product-design-hover">
                               <li><h1 id = "product" >PRODUCT</h1></li>
                               <li><h1 id = "design" >DESIGN</h1></li>
-                        
+                              <img className="hi-img"  src={hithere}></img>
                         </div>
-                        
+
                         <li><h1 id = "simple" style={{WebkitTextStrokeWidth:'1px',WebkitTextFillColor:"transparent"}}>SIMPLE</h1></li>
-                        <img className="hi-img"  src={hithere}></img>
+                        
           </ul>
+          
         <img className="scroll-img" src={scroll}></img>
         
         
