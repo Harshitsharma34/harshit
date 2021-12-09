@@ -23,19 +23,18 @@ export default function Work() {
     fetchData();
   }, []);
   return (
-    <div>
-      <div className="container">
-        {
-        doc.map((e) => {
-          <div className="project">
-            <div className="project-image"></div>
-            <h2 className="project-name">Project Name </h2>
-            <p className="project-description">
-              Description asdjad asshhee shahsdasdhb wahbdwah
-            </p>
-          </div>;
-        })}
-      </div>
+    <div className="container">
+      {
+      doc.map((e) => {
+        <div className="project">
+          <div className="project-image"></div>
+          <h2 className="project-name">Project Name </h2>
+          <p className="project-description">
+            Description asdjad asshhee shahsdasdhb wahbdwah
+          </p>
+        </div>;
+      })
+      }
     </div>
   );
 }

@@ -43,19 +43,15 @@ ul.nav-list li{
     text-align: center;
   padding: 14px 36px;
   font-size: 20px;
- 
-
 }
-
-
 .navbar-container{
   padding-top: 10px;
 }
 .nav-list:hover li{
   opacity:0.4;
-  transition: 200ms;
+  transition: 200ms ease;
 }
 .nav-list li:hover{
   opacity:1;
-  transition: 200ms
+  transition: 200ms ease;
 }
