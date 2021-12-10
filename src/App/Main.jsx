@@ -13,7 +13,7 @@ function Main() {
         <Nav/>
         <Header/>
         <DumpardDiv/>
-  
+        <Work/>
         <MoreWorkMain/>
         <About/>
         <Contact/>

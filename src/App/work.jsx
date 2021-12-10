@@ -21,7 +21,7 @@ export default function Work() {
       }
     };
     fetchData();
-  }, []);
+  },[]);
   return (
     <div className="container">
       {
