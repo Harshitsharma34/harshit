@@ -1,6 +1,14 @@
 import React, { useEffect, useState } from "react";
 import Prismic from "@prismicio/client";
-import { Date, Link, RichText } from "prismic-reactjs";
+// import Swiper core and required modules
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+
+import { Swiper, SwiperSlide } from "swiper/react/swiper-react";
+
+// Import Swiper styles
+import "swiper/swiper.min.css";
+import "swiper/modules/pagination/pagination.min.css";
+import "swiper/modules/navigation/navigation.min.css";
 
 export default function Work() {
   const apiEndpoint = "https://harshitsharma.prismic.io/api/v2";
@@ -25,15 +33,29 @@ export default function Work() {
   };
   return (
     <div className="container">
-      {doc?.map((e) => (
-        <div className="project">
-          <div className="project-image"></div>
-          <h2 className="project-name">Project Name </h2>
-          <p className="project-description">
-            Description asdjad asshhee shahsdasdhb wahbdwah
-          </p>
-        </div>
-      ))}
+      <Swiper
+        // install Swiper modules
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        spaceBetween={50}
+        slidesPerView={2}
+        navigation={true}
+        pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log("slide change")}
+      >
+        {doc?.map((e) => (
+          <SwiperSlide>
+            <div className="project">
+              <div className="project-image"></div>
+              <h2 className="project-name">Project Name </h2>
+              <p className="project-description">
+                Description asdjad asshhee shahsdasdhb wahbdwah
+              </p>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 }
