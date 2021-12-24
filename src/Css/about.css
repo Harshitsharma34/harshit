@@ -8,8 +8,6 @@
     text-align: left;
     padding: 2% 8% 2%;
     padding-bottom: 4%;
-
-
 }
 
 .about-block{
@@ -25,7 +23,7 @@
 .about-image{
 
     float: right;
-    display: flex;
+
     height: 79vh;
     width: 79vh;
     margin-top: 21px;

@@ -13,9 +13,9 @@ function Dumpyard() {
     "https://picsum.photos/300/300?image=206",
     //...
     "https://picsum.photos/300/300?image=206",
-
-    "https://picsum.photos/300/300?image=206",
-    "https://picsum.photos/300/300?image=206",
+"https://w.wallhaven.cc/full/dp/wallhaven-dpo38l.jpg",
+"https://w.wallhaven.cc/full/dp/wallhaven-dpo38l.jpg",
+    
   ];
 
   const apiEndpoint = "https://harshitsharma.prismic.io/api/v2";

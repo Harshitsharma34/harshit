@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component,useState } from "react";
 import "../Css/dumpyarddiv.css";
 import "../Css/design-process.css";
 import { Modal } from "react-responsive-modal";
@@ -59,7 +59,7 @@ class DumpardDiv extends Component {
             <a className="button2" onClick={this.onOpenModal}>
               Design Process
             </a>
-            <img className="header-img"  src={dumpyardImage}></img>
+            <img className="dumpyard-div-img"  src={dumpyardImage}></img>
           </div>
           <Modal
             classNames="design-process-modal"

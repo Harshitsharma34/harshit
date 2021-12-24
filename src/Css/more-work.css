@@ -1,102 +1,110 @@
-.more-work{
-    height:110vh;
-
-    background-color: #18152E;
-   
-}
-.projects-flexbox {
-    display: inline-flex;
-    flex-wrap: wrap;
-    left: 7%;
-    position: relative;
-    top: -8%;
+body {
+  overflow-x: hidden; /* Hide scrollbars */
 }
 
-.projects-flexbox > div {
-    margin: 10px;
+.container-more-work {
+  padding-bottom: 60px;
+  background-color: #251b4b67;
 }
 
-.more-work-heading{
-    -webkit-text-stroke-width: .7px;
-    -webkit-text-fill-color: transparent;
-    font-family: 'BasementGrotesk';
-    color: white;
-    font-size: 65px;
-    width: 50%;
-    position: relative;
-    left: 8%;
-    top: 12%;
-    padding-top: 5%;
+.swiper-slide{
+  width: 430px !important;
 }
 
-.project{
-    width: 380px;
-    height: 400px;
-    background-color: #171429;
-    padding: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
-}
-
-.project-image{
-    background-color: blueviolet;
-    width: 380px;
-    height: 220px;
-    border-radius: 20px;
-}
-
-.project-name{
-    font-size: 25px;
-    width: 24vw;
-    color: #C7CCE7;
-    font-family: 'HelveticaNowDisplayRegular';
-}
-
-.project-description
+.more-work 
 {
-    font-size: 18px;
-    color: #8A829F;
-    width: 24vw;
-    font-family: 'HelveticaNowDisplayRegular';
-    position: relative;
-    top: -2%;
-}
-.lock{
-    width: 25px;
-    height: 25px;
-    position: relative;
-    top: 4px;
+  position: relative;
+  top :20px;
+  padding: 10px;
+  display: flex;
+  padding-bottom:0px !important
 }
 
 
-.password-input{
-    background-color: transparent;
-    border: 2px solid rgb(255, 255, 255,0.2);
-    padding: 10px 10px;
-    border-radius: 30px;
-    font-family: 'HelveticaNowDisplayRegular';
-    color: white;
-    font-size: 18px;
-    width:8em
+.more-work-heading {
+  -webkit-text-stroke-width: 0.7px;
+  -webkit-text-fill-color: transparent;
+  font-family: "BasementGrotesk";
+  color: white;
+  font-size: 65px;
+  width: 50%;
+  position:relative;
+  left: 8%;
+  top: 12%;
+  padding-top: 40px;
+
 }
 
-::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
-    color: rgb(255, 255, 255,0.1);
-    opacity: 1; /* Firefox */
-    padding: 10px;
-  }
+.project {
+  width: 380px;
+  position: relative;
+  background-color: #15102c;
+  padding: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+}
 
-  .arrow{
-    float:right ;
-    top: 10px;
-    position: relative ;
-    
-  }
-.cantshow-img{
-    float: right;
-    width: 30%;
-    right: 20%;
-    top: -18%;
-    position: relative;
-   
+.project-image {
+  background-color: blueviolet;
+  width: 380px;
+  height: 220px;
+  border-radius: 20px;
+}
+
+.project-name {
+  font-size: 25px;
+  width: 24vw;
+  color: #c7cce7;
+  font-family: "HelveticaNowDisplayRegular";
+}
+
+.project-description {
+  font-size: 18px;
+  color: #9377b8;
+  width: 24vw;
+  font-family: "HelveticaNowDisplayRegular";
+  position: relative;
+  top: -2%;
+}
+.lock {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  top: 4px;
+}
+
+.password-input {
+  background-color: transparent;
+  border: 2px solid rgb(255, 255, 255, 0.2);
+  padding: 10px 10px;
+  border-radius: 30px;
+  font-family: "HelveticaNowDisplayRegular";
+  color: white;
+  font-size: 18px;
+  width: 8em;
+}
+.Swiper {
+ 
+ 
+ left: 8%;
+ overflow-y: hidden;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: rgb(255, 255, 255, 0.1);
+  opacity: 1; /* Firefox */
+  padding: 10px;
+}
+
+.arrow {
+  bottom: 25px;
+  position: absolute;
+  right: 15px;
+}
+.cantshow-img {
+  width: 30%;
+  left: 50%;
+  position:absolute;
+  
 }
