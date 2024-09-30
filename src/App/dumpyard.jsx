@@ -1,22 +1,14 @@
 import "../Css/dumpyard.css";
 import React, { useEffect, useState } from "react";
 import Prismic from "@prismicio/client";
-import { Date, RichText } from "prismic-reactjs";
-import image from "../Assets/Logo.svg";
 import { Link } from "react-router-dom";
-import image1 from "../Assets/1.jpg";
-import image2 from "../Assets/2.jpg";
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import Lottie from "lottie-react";
+import Logo from "../Assets/logo.json";
+import Loading from "../Assets/loading.json";
 
 function Dumpyard() {
-  const images = [
-    "https://picsum.photos/300/300?image=206",
-    //...
-    "https://picsum.photos/300/300?image=206",
-"https://w.wallhaven.cc/full/dp/wallhaven-dpo38l.jpg",
-"https://w.wallhaven.cc/full/dp/wallhaven-dpo38l.jpg",
-    
-  ];
+  const [isLoading, setIsLoading] = useState(false);
+
 
   const apiEndpoint = "https://harshitsharma.prismic.io/api/v2";
   const accessToken =
@@ -27,22 +19,28 @@ function Dumpyard() {
 
   useEffect(() => {
     const fetchData = async () => {
+   
+      setIsLoading(true);
       const response = await Client.query(
         Prismic.Predicates.at("document.type", "dumpyard")
       );
       if (response) {
-        setDocData(response.results[0]);
-        console.log("harshit", response);
+        setDocData(response.results[0].data);
       }
+      setIsLoading(false);
     };
     fetchData();
   }, []);
 
+
   return (
-    <div>
+    <div className="dumpyard-container">
       <div className="nav">
         <div className="navbar-container">
-          <img className="logo" src={image} alt="My Happy SVG" />
+          <div className="logo">
+            <Lottie animationData={Logo} loop={true} />
+            {/* <img className="logo" src={image} alt="My Happy SVG" /> */}
+          </div>
           <Link className="backtohome" to="/">
             Back to 🏠{" "}
           </Link>
@@ -52,22 +50,44 @@ function Dumpyard() {
         <h1 className="dumpyard-text">DUMPYARD</h1>
         <br />
         <p>
-          This is where I randomly dump stuffs. Enjoy!<span> 🚀</span>
+          This is where I scribble down my design projects at random. Enjoy!
+          <span> 🚀</span>
         </p>
       </div>
+
       <div className="responsive-grid">
-        <ResponsiveMasonry columnsCountBreakPoints={{ 450: 1, 750: 2 }}>
-          <Masonry columnsCount={2} gutter="20px">
-            {images.map((image, i) => (
-              <img
-                className="dumpyard-image"
-                key={i}
-                src={image}
-                style={{ width: "100%", display: "block" }}
-              />
-            ))}
-          </Masonry>
-        </ResponsiveMasonry>
+        {doc?.dumpyard.map((e) => (
+          <div className="images">
+            {e.content_type == "Image" ? (
+              <>
+                {isLoading ? (
+                  <Lottie animationData={Loading} loop={true} />
+                ) : (
+                  <>
+                    <img className="dump-image" src={e.image_url} />
+                  </>
+                )}
+              </>
+            ) : (
+              <>
+                {isLoading ? (
+                  <Lottie animationData={Loading} loop={true} />
+                ) : (
+                  <>
+                    <video
+                      className="dump-video"
+                      src={e.video_url}
+                      muted
+                      playsInline
+                      loop="loop"
+                      autoPlay="autoplay"
+                    ></video>
+                  </>
+                )}
+              </>
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );

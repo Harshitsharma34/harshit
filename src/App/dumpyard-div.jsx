@@ -1,4 +1,4 @@
-import React, { Component,useState } from "react";
+import React, { Component, useState } from "react";
 import "../Css/dumpyarddiv.css";
 import "../Css/design-process.css";
 import { Modal } from "react-responsive-modal";
@@ -6,6 +6,7 @@ import divider from "../Assets/divider.svg";
 import CloseButton from "../Assets/Close button2.svg";
 import { Link } from "react-router-dom";
 import dumpyardImage from "../Assets/Dumpyard Image.png";
+import dumpyardImage2 from "../Assets/Dumpyard2.png";
 
 class DumpardDiv extends Component {
   state = {
@@ -47,45 +48,82 @@ class DumpardDiv extends Component {
       <div>
         <section className="dumpyard-sec">
           <div className="dump-div">
-            <h1 className="dump-text">DUMPYARD</h1>
-            <p style={{ lineHeight: "25px" }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-              malesuada hendrerit nibh, non vehicula enim hendrerit eget.
-              Suspendisse eget ultrices elit. Mauris odio nunc
-            </p>
-            <Link to="/dumpyard" className="button1">
-              Take a look
-            </Link>
-            <a className="button2" onClick={this.onOpenModal}>
-              Design Process
-            </a>
-            <img className="dumpyard-div-img"  src={dumpyardImage}></img>
-          </div>
-          <Modal
-            classNames="design-process-modal"
-            open={open}
-            onClose={this.onCloseModal}
-            showCloseIcon={true}
-            closeIcon={closeIcon}
-          >
-            <h2 className="design-process-heading">DESIGN PROCESS</h2>
-            <div className="process-div1"></div>
-            <div className="process-div1"></div>
-            <div className="process-div1"></div>
-            <div className="process-close">
-              <img className="divider" src={divider} alt="divider" />
-              <a className="closeButton" onClick={this.onCloseModal}>
-                Close{" "}
-                <img
-                  className="closeButton2"
-                  src={CloseButton}
-                  alt="close"
-                  style={{ color: "white" }}
-                />
-              </a>
+            <img className="dumpyard-div-img2" src={dumpyardImage2}></img>
+            <div className="dump-content">
+              <h1 className="dump-text">DUMPYARD</h1>
+              <p style={{ lineHeight: "25px" }}>
+                Dumpard is a place where I dump random things related to design world.
+                Hope you'll like it. Click on the button below. 👇
+              </p>
+              <div className="dump-btn">
+                <Link to="/dumpyard" className="button1">
+                  Take a look
+                </Link>
+                <a className="button2" onClick={this.onOpenModal}>
+                  Design Process
+                </a>
+              </div>
             </div>
-          </Modal>
+
+            <img className="dumpyard-div-img" src={dumpyardImage}></img>
+          </div>
         </section>
+        <Modal
+          classNames="design-process-modal"
+          open={open}
+          onClose={this.onCloseModal}
+          showCloseIcon={true}
+          closeIcon={closeIcon}
+        >
+          <h2 className="design-process-heading">DESIGN PROCESS</h2>
+          <div className="process-div1">
+            <img
+              className="design-process-image"
+              src="https://res.cloudinary.com/harshitdesign/image/upload/v1645703832/Design%20Process/Background_nwhy7f.svg"
+              alt="background"
+            />
+          </div>
+          <div className="process-div1">
+            <img
+              className="design-process-image"
+              src="https://res.cloudinary.com/harshitdesign/image/upload/v1645702421/Design%20Process/Conflict_rleehb.svg"
+              alt="Conflict"
+            />
+          </div>
+          <div className="process-div1">
+            <img
+              className="design-process-image"
+              src="https://res.cloudinary.com/harshitdesign/image/upload/v1645702420/Design%20Process/Rising_action_ksmvvr.svg"
+              alt="Rising_Action"
+            />
+          </div>
+          <div className="process-div1">
+            <img
+              className="design-process-image"
+              src="https://res.cloudinary.com/harshitdesign/image/upload/v1645703831/Design%20Process/Climax_pcl41m.svg"
+              alt="Climax"
+            />
+          </div>
+          <div className="process-div1">
+            <img
+              className="design-process-image"
+              src="https://res.cloudinary.com/harshitdesign/image/upload/v1645702420/Design%20Process/Falling_Action_n72c3u.svg"
+              alt="Falling_Action"
+            />
+          </div>
+          <div className="process-close">
+            <img className="divider" src={divider} alt="divider" />
+            <a className="closeButton" onClick={this.onCloseModal}>
+              Close
+              <img
+                className="closeButton2"
+                src={CloseButton}
+                alt="close"
+                style={{ color: "white" }}
+              />
+            </a>
+          </div>
+        </Modal>
       </div>
     );
   }

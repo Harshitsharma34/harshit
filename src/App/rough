@@ -1,0 +1,13 @@
+
+const init = async (e) => {
+  console.log("event", e);
+  const prismicDoc = await client.getByUID("homepage", e)
+  if (prismicDoc) {
+    console.log(prismicDoc.data);
+  }
+}
+
+const init = async () => {
+         const prismicDoc = await client.getFirst()
+      const { title, description } = prismicDoc.data
+     }

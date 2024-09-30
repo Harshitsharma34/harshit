@@ -1,75 +1,176 @@
+.dumpyard-container {
+  width: 80vw;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .dumpyard-text {
   font-family: "BasementGrotesk";
   position: relative;
-  float: left;
   top: 15vh;
-  right: 7%;
-  font-size: 4em;
+  font-size: calc(2.2vw + 2vh + 1vmin);
   color: white;
 }
 .dumpyard p {
-  color: rgb(115, 112, 150);
-  font-family: "HelveticaNowDisplayRegular";
+  color: rgb(187, 184, 214);
+  font-family: "Roobert-Regular";
   position: relative;
-  top: 25vh;
-  right: 34.5vw;
-  float: left;
-  font-size: 1.4em;
+  margin-block-start: calc(3.2vw + 0.4vh + 0.5vmin);
+  margin-block-end: 0em;
+  font-size: calc(0.6vw + 0.4vh + 0.5vmin);
 }
 
-.responsive-grid {
-  width: 85vw;
-
-  position: absolute;
-  left: 7%;
-  top: 45%;
-}
-
-.logo {
-  position: relative;
-  float: left;
-  width: 100px;
-  height: 100px;
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin: 0.5%;
-  margin-left: 7%;
-}
-.nav .backtohome {
-  padding: 14px 28px;
+.backtohome {
+  padding: 14px 20px;
   text-decoration: none;
-  color: white;
-  font-family: "HelveticaNowDisplayRegular";
-  font-size: 1.1em;
+  color: rgb(187, 184, 214);
+  font-family: "Roobert-Regular";
+  font-size: calc(0.6vw + 0.4vh + 0.5vmin);
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.26);
   float: right;
-  margin-right: 7%;
   margin-top: 20px;
+  margin-right: 30px;
 }
+
 .dumpyard-image {
   border-radius: 20px;
   background-color: aquamarine;
 }
 
-@font-face {
-  font-family: "HelveticaNowDisplay";
-  src: url(../Assets/Fonts/HelveticaNowDisplay-Medium.woff2);
-}
 
-@font-face {
-  font-family: "HelveticaNowDisplayRegular";
-  src: url(../Assets/Fonts/HelveticaNowDisplay-Regular.otf);
-}
 
 .navbar-container {
   padding-top: 10px;
 }
 
-.nav .backtohome:hover {
+.backtohome:hover {
   background-color: #7140f2;
   color: white;
   transition: 300ms;
   border: 1px solid transparent;
+  cursor: url('../Assets/cursor.svg'), auto;
+}
+.responsive-grid {
+  left: 0px;
+  width: 100%;
+  position: relative;
+  top: 50px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+
+}
+
+.images {
+  width: 48.9%;
+  height: 650px;
+  border-radius: 20px;
+}
+.dump-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.dump-video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+
+@media screen and (max-device-width: 1400px) {
+  .images {
+    width: 48.9%;
+    height: 550px;
+    border-radius: 20px;
+  }
+  .dumpyard-text {
+    font-family: "BasementGrotesk";
+    position: relative;
+    top: 15vh;
+    font-size: 65px;
+    color: white;
+  }
+  .dumpyard p {
+    width: 80%;
+     font-size: 1.4em;
+     margin-block-start: 03.5em;
+     margin-block-end: 0em;
+   }
+}
+
+@media screen and (max-device-width: 1180px) {
+  .dumpyard-text {
+    font-family: "BasementGrotesk";
+    position: relative;
+    top: 15vh;
+    font-size: 60px;
+    color: white;
+  }
+  .dumpyard p {
+    width: 80%;
+     font-size: 1.2em;
+     margin-block-start: 04em;
+     margin-block-end:-1em;
+   }
+  .images {
+    width: 47.9%;
+    height: 450px;
+    border-radius: 20px;
+  }
+  .dumpyard-container {
+    width: 90vw;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-device-width: 312px) and (max-device-width: 812px) {
+  .dumpyard p {
+   width: 80%;
+    font-size: 18px;
+    margin-block-start: 2.8em;
+    margin-block-end: -1em;
+    top: 0vh;
+    left: 20px;
+  }
+  .dumpyard-text {
+    width: 80%;
+    font-family: "BasementGrotesk";
+    position: relative;
+    top: 90px;
+    font-size: 40px;
+    color: white;
+    left: 20px;
+  }
+
+  .images {
+    width: 100%;
+    height: 400px;
+    border-radius: 20px;
+
+  }
+  .dumpyard-container {
+    width: 95vw;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .images{
+    margin-bottom: 20px;
+  }
+  
+  .responsive-grid {
+    gap: 0px;
+  }
+  .backtohome {
+    font-size: 16px;
+    position: relative;
+    top: 20px;
+    margin-right: 10px;
+  }
 }

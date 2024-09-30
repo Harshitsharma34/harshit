@@ -1,0 +1,257 @@
+.scrollTop {
+  position: fixed;
+ 
+  bottom: 20px;
+  right: 20px;
+  height: 50px;
+  
+  z-index: 1000;
+  cursor: pointer;
+  animation: fadeIn 0.3s;
+  transition: opacity 0.4s;
+  opacity: 0.5;
+}
+
+.scrollTop:hover {
+  opacity: 1;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.case-study-parent {
+  width: 100%;
+  max-width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+.thank-you {
+  font-size: calc(2.5vw + 2.5vh + 2.5vmin);
+  font-family: "BasementGrotesk";
+  text-transform: uppercase;
+  color: white;
+}
+.thank-you-div {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+.date-launch {
+  font-family: "Roobert-Regular";
+  font-size: calc(0.8vw + 0.4vh + 0.5vmin);
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  display: flex;
+  align-items: center;
+}
+.date-launch a {
+  font-family: "Roobert-Regular";
+  margin-block-start: 0.5em;
+  margin-block-end: 1.5em;
+  color: rgb(213, 211, 236);
+  text-decoration: none;
+
+  transition: all 200ms ease;
+}
+
+.date {
+  color: rgba(255, 255, 255, 0.212);
+  display: flex;
+  align-items: center;
+  margin-block-start: 0.5em;
+  margin-block-end: 1.5em;
+  gap: 10px;
+}
+.date p {
+  color: rgb(213, 211, 236);
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+.case-study-child {
+  width: 100%;
+  margin-top: 20vh;
+  max-width: 75vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.case-study-heading {
+  position: relative;
+  font-size: calc(6vw + 0.4vh + 0.5vmin);
+  color: white;
+  font-family: "BasementGrotesk";
+  margin-block-start: 0.83em;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  margin-block-end: 0.1em;
+  margin-inline-start: 0px;
+  text-transform: uppercase;
+}
+.description-CS {
+  font-family: "Roobert-Regular";
+  font-size: calc(0.6vw + 0.5vh + 0.54vmin);
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-line-clamp: 8;
+  -webkit-box-orient: vertical;
+  width: 52%;
+  line-height: calc(1vw + 0.6vh + 0.6vmin);
+  text-align: left;
+}
+.description-CS h1 {
+  font-family: "Roobert-Medium";
+  color: rgb(255, 255, 255);
+
+  font-size: calc(1vw + 1vh + 1vmin);
+}
+.case-study-text {
+  font-family: "Roobert-Regular";
+  color: rgb(181, 178, 189);
+}
+
+.case-study-tags {
+  width: 100%;
+
+  position: relative;
+}
+
+.case-study-main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.case-study {
+  position: relative;
+  width: 100%;
+  border-radius: 20px;
+  height: auto;
+  padding: 0;
+}
+.fill {
+  width: 100%;
+  height: auto;
+}
+.split {
+  width: 48.9%;
+}
+.footer-ng {
+  width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 1215px) {
+  .case-study-parent {
+    width: 100%;
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .case-study-child {
+    width: 100%;
+    margin-top: 20vh;
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media screen and (max-width: 1008px) {
+  .split {
+    width: 48%;
+  }
+  .case-study-heading {
+    font-size: 12vw;
+    color: white;
+    font-family: "BasementGrotesk";
+    margin-block-start: 0.83em;
+    margin-block-end: 0.01em;
+    margin-inline-start: 0px;
+    text-transform: uppercase;
+    width: 100%;
+  }
+  .date-launch {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    display: flex;
+    align-items: center;
+  }
+  .footer-ng {
+    width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .date-launch {
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    display: flex;
+    align-items: center;
+  }
+  .thank-you-div {
+    left: 10px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .case-study-heading {
+    display: -webkit-box;
+    font-size: 14vw;
+    color: white;
+    font-family: "BasementGrotesk";
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    width: 100%;
+  }
+  .case-study-parent {
+    width: 100%;
+    max-width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .case-study-child {
+    width: 100%;
+    margin-top: 20vh;
+    max-width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .split {
+    width: 100%;
+  }
+  .description-CS {
+    font-family: "Roobert-Regular";
+    font-size: 16px;
+    position: relative;
+    -webkit-line-clamp: 8;
+    -webkit-box-orient: vertical;
+    width: 90%;
+    line-height: 22px;
+    text-align: left;
+  }
+  .description-CS h1 {
+    font-family: "Roobert-Medium";
+    font-size: 24px;
+  }
+  .footer-ng {
+    width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

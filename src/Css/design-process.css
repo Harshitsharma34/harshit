@@ -17,11 +17,9 @@
   z-index: -1;
 }
 
-
 .react-responsive-modal-container {
   height: 100%;
   outline: 0;
-
   overflow-x: hidden;
   overflow-y: auto;
   text-align: center;
@@ -31,47 +29,53 @@
 .react-responsive-modal-containerCenter:after {
   width: 0;
   height: 100%;
-  content: '';
+  content: "";
   display: inline-block;
   vertical-align: middle;
 }
 
 .react-responsive-modal-modal {
-  max-width: 800rem;
+  max-width: 97vw !important;
   display: inline-block;
-  top: 50px;
   text-align: left;
   vertical-align: middle;
-  background: #22233D;
+  background: #22233d !important ;
   border-radius: 20px;
   box-shadow: 0 12px 15px 0 rgba(0, 0, 0, 0.25);
-  margin: 1.2rem;
-  padding: 1.2rem;
+  margin: 0.83rem !important;
+  padding: 1rem  !important;
   position: relative;
   overflow-y: auto;
 }
 
-
-.design-process-heading{
+.design-process-heading {
   font-size: 105px;
   color: white;
-  font-family: 'BasementGrotesk';
+  font-family: "BasementGrotesk";
   -webkit-text-stroke-width: 1px;
-    -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.5em;
+  margin-inline-start: 0px;
 }
 
-.process-div1{
-  position: relative;
-  top: -50px;
-  right: -6px;
-  margin-top: 20px;
-  width: 70vw;
-  height: 85vh;
+.process-div1 {
+  margin-bottom: 20px;
+  height: 90vh;
+  width: 100%;
   border-radius: 20px;
-  background-color: #7140F2;
+  overflow: hidden;
   
 }
+.design-process-image{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 
+.case-study-modal {
+  width: 95vw;
+}
 
 .react-responsive-modal-closeButton {
   position: absolute;
@@ -83,57 +87,53 @@
   background-color: transparent;
   display: flex;
 }
-.closeButton{
+.closeButton {
   position: relative;
-  font-family: 'HelveticaNowDisplayRegular';
-  font-size: 20px;
-  color: rgb(255, 255, 255,0.6);
+  font-family: "Roobert-Regular";
+  font-size: calc(0.6vw + 0.4vh + 0.5vmin);
+  color: #f5eeff;
   background-color: #222238;
-  border: 2px solid rgb(255, 255, 255,0.1);
-  padding: 15px 30px;
+  border: 2px solid rgb(255, 255, 255, 0.1);
+  padding: 16px 22px;
   border-radius: 8px;
   transition: all 0.2s ease 0s;
-  float: left;
-  left: 45%;
+  width: calc(2vw + 5vh + 1vmin);;
 }
 .closeButton :focus {
   outline: none !important;
 }
 
-
-.process-close{
-  
+.process-close {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 80px;
-}
-.divider{
-  position: relative;
-  top:-40px;
-  right: 4em
-  
-  
+  margin-top: 10px;
+  margin-bottom: 40px;
+  gap: 20px;
 }
 
-.closeButton:hover{
+.closeButton:hover {
   color: white;
-    background-color: #7140F2;
-    cursor: pointer;
+  background-color: #7140f2;
+  cursor: url('../Assets/cursor.svg'), auto;
 }
-.close{
+.close {
   position: relative;
-  top:-50px
+  top: -50px;
 }
-.closeButton2{
-
-  width: 15px;
-  height: 15px;
+.closeButton2 {
+  width: 12px;
+  height: 12px;
   position: relative;
   top: 2px;
   left: 5px;
+  cursor: url('../Assets/cursor.svg'), auto;
 }
 
-
+.closeButton2:hover {
+  cursor: url('../Assets/cursor.svg'), auto;
+}
 
 
 @keyframes react-responsive-modal-overlay-in {
@@ -173,5 +173,45 @@
   100% {
     transform: scale(0.96);
     opacity: 0;
+  }
+}
+
+@media screen and (min-width: 998px) {
+  .case-study-modal {
+    width: 60vw;
+  }
+}
+
+@media screen and (min-device-width: 312px) and (max-device-width: 812px) {
+
+ 
+  .react-responsive-modal-modal {
+    max-width: 97vw !important;
+    margin: 0.4rem !important;
+    padding: 0.3rem !important;
+    
+  }
+  .design-process-heading {
+    font-size: 60px;
+    width: 80%;
+  }
+
+  .process-div1 {
+    margin-bottom: 10px;
+    height: 220px;
+    width: 100%;
+    border-radius: 16px;
+  }
+
+  .closeButton {
+    position: relative;
+    font-size: 18px;
+    width: calc(5vw + 5vh + 1vmin);
+  }
+
+  
+  .divider {
+    height: 1px;
+    width: 80vw;
   }
 }

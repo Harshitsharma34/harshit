@@ -1,57 +1,82 @@
-.nav-list
-{
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        float: right;
-        font-family: 'HelveticaNowDisplayRegular';
-        font-style:medium ;
-        position: relative;
-        margin-top: 30px;
-        margin-right: 80px;
-        overflow: hidden;
-    
-} 
-.logo{
+
+.nav-list {
+  list-style-type: none;
+  right: 0;
+  top: 50px;
+  margin: 0;
+  padding: 0;
+  font-family: "Roobert-Regular";
+
   position: absolute;
-  float: left;
-  width:  100px;
-  height: 100px;
-  background-position: 50% 50%;
-  background-repeat:   no-repeat;
-  background-size:     cover;
-  margin:0.5%;
-  margin-left: 7%;
+  overflow: hidden;
+}
+.logo {
+  top: 20px;
+  position: absolute;
+  width: calc(6vw + 5vh + 5vmin);
+  height: auto;
+  left: 0px;
+
 }
 
 @font-face {
-    font-family: 'HelveticaNowDisplay';
-    src: url(../Assets/Fonts/HelveticaNowDisplay-Medium.woff2);
+  font-family: "Roobert-Medium";
+  src: url(../Assets/Fonts/Roobert-Medium.woff2);
 }
 
 @font-face {
-  font-family: 'HelveticaNowDisplayRegular';
-  src: url(../Assets/Fonts/HelveticaNowDisplay-Regular.otf);
+  font-family: "Roobert-Regular";
+  src: url(../Assets/Fonts/Roobert-Regular.woff2);
 }
 
-ul.nav-list li{
-    display: inline;
+ul.nav-list li {
+  display: inline;
 }
 
-.nav-list li a{
-    text-decoration: none;
-    text-align: center;
-  padding: 14px 36px;
-  font-size: 20px;
+.nav-list li a {
+  text-decoration: none;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: calc(0.7vw + 0.5vh + 0.5vmin);
+  cursor: url('../Assets/cursor.svg'), auto;
 }
-.navbar-container{
+.navbar-container {
+  position: relative;
   padding-top: 10px;
 }
-.nav-list:hover li{
-  opacity:0.4;
+.nav-list:hover li {
+  opacity: 0.4;
   transition: 200ms ease;
+  cursor: url('../Assets/cursor.svg'), auto;
 }
-.nav-list li:hover{
-  opacity:1;
+.nav-list li:hover {
+  opacity: 1;
   transition: 200ms ease;
+  cursor: url('../Assets/cursor.svg'), auto;
+}
+
+@media screen and (max-device-width: 830px)  {
+  .nav-list li a {
+    text-decoration: none;
+    text-align: center;
+    padding: 14px 14px;
+    font-size: 16px;
+    cursor: url('../Assets/cursor.svg'), auto;
+  }
+  .nav-list{
+  right: 30px;
+  }
+  }
+
+@media screen and (max-device-width: 600px) {
+.logo {
+  top: 30px;
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  left: -30px;
+}
+.nav-list{
+display: none;
+  }
 }

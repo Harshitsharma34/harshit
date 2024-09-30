@@ -1,152 +1,407 @@
-.contact-div{
+.contact-div {
+  
   padding-bottom: 50px;
+  margin-top: 12%;
+  
 }
-.contact-div h2{
-    font-family: 'BasementGrotesk';
-    font-size: 65px;
+.contact-div h2 {
+  font-family: "BasementGrotesk";
+  font-size: calc(2.4vw + 2.2vh + 1vmin);
+  color: white;
+  text-align: left;
+  width: 70%;
+  position: relative;
+  left: 30px;
+  margin-block-start: 0.8em;
+  margin-block-end: 0.1em;
+}
+
+.contact-sub
+{
+  position: relative;
+  font-family: "Roobert-Regular";
+  left: 30px;
+  color: rgb(187, 184, 214);
+  margin-block-start: 0.1em;
+  margin-block-end: 1.5em;
+  font-size: calc(0.6vw + 0.4vh + 0.5vmin);
+}
+
+.footer-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  position: relative;
+  width: 95%;
+  gap:20px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.container-1 {
+  position: relative;
+  display: flex;
+  gap: 20px;
+  width: 24vw;
+  height:calc(6.1vw + 0.4vh + 0.5vmin);
+  color: white;
+  background-color: #121222;
+  border-radius:14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  align-items: center;
+}
+.insta{
+  width: 50px;
+}
+
+.icon{
+  width: 50px;
+  margin: auto;
+  display: block;
+}
+
+.icon-div {
+  position: absolute;
+  background-color: #7140F2;
+  width:calc(5vw + 0.4vh + 0.5vmin);
+  height: calc(5vw + 0.4vh + 0.5vmin);
+  border-radius: 14px;
+  left: 10px;
+  display: flex;
+  justify-content: center;
+}
+.text{
+  position: absolute;
+  width: auto;
+  left: calc(6.5vw + 0.4vh + 0.5vmin);
+  margin-left:auto;
+  margin-right:auto;
+  font-size: calc(0.6vw + 0.4vh + 0.5vmin);
+}
+
+.text h3 {
+  font-family: "Roobert-Medium";
+  margin-block-start: 0.2em;
+  margin-block-end: 0.2em;
+  color: #c7cce7;
+  letter-spacing: 0.5px;
+}
+.text p {
+  font-family: "Roobert-Regular";
+  margin-block-start: 0.4em;
+  margin-block-end: 0.2em;
+  color: rgb(187, 184, 214);
+}
+
+.hover:hover {
+  border: 1px solid rgba(255, 255, 255, 0);
+  box-shadow: 0 1px 30px rgba(113, 64, 242, 0.8);
+  cursor: url('../Assets/cursor.svg'), auto;
+  transition: all 0.2s ease 0s;
+}
+.copy-to-clipboard{
+  width: 25%;
+  height: auto;
+  position: relative;
+  float: right;
+  
+  margin-bottom: 20px;
+}
+.email{
+
+  background-color: #7140F2;
+}
+.email-img{
+  background-color: #121222;
+}
+.success-copy{
+  position: relative;
+  background-color: #7140F2;
+  padding:8px 24px;
+  font-size: calc(0.6vw + 0.4vh + 0.5vmin);
+  font-family: "Roobert-Regular";
+  z-index: 9999;
+  border-radius: 50px;
+  animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1) both;
+  right: 40vh;
+  bottom: -25vh;
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 1440px) {
+  .container-1 {
+   max-width: 100%
+  }
+ 
+}
+@media (max-width: 1200px) {
+  .contact-sub{
+    width: 90%;
+   
+     }
+     
+     .contact-div h2 {
+   
+       width: 80%;
+     }
+     
+     .footer-main {
+       width: 100%;
+       left: 30px;
+     }
+     .container-1 {
+      width: 36vw;
+      height:120px;
+      }
+  
+  .text{
+    left: 120px;
+  }
+  .text h3 {
+    font-size: 18px;
+  }
+  .text p {
+    font-family: "Roobert-Regular";
+    font-size: 16px;
+    width: 100%;
+  }
+  .icon-div{
+    border-radius: 12px;
+   height: 100px;
+   width: 90px;
+  }
+  .copy-to-clipboard{
+    width: 30%;
+    right: 10%;
+  }
+}
+
+@media (max-width: 830px) {
+  .success-copy{
+    left: 200px;
+    font-size: 16px;
+  }
+  .contact-sub{
+ font-size: calc(1.5vw + 0.4vh + 0.5vmin);
+  }
+  
+  .contact-div h2 {
+
+    width: 50%;
+  }
+  
+  .footer-main {
+    width: 100%;
+    left: 30px;
+  }
+  .container-1 {
+  width: 45vw;
+  height:120px;
+  }
+  .email{
+    max-width: 48%;
+  }
+  .text{
+    left: 115px;
+  }
+  .text h3 {
+    font-size: calc(1.8vw + 0.4vh + 0.5vmin);
+  }
+  .text p {
+    font-family: "Roobert-Regular";
+    font-size: calc(1.2vw + 0.4vh + 0.5vmin);
+  }
+  .icon-div{
+    border-radius: 12px;
+   height: 100px;
+   width: 90px;
+  }
+  .email{
+   
+    background-color: #7140F2;
+  }
+  .email-img{
+    background-color: #121222;
+  }
+  .copy-to-clipboard{
+    width: 30%;
+    right: 10%;
+  }
+ 
+}
+@media (max-width: 650px) {
+  .footer-main {
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    left:0;
+    margin-left: auto;
+    margin-right: auto;
+    
+  }
+  .container-1 {
+   min-width: 100%;
+   width:100%;
+   height: 16vh;
+  }
+  .text{
+    left: 140px;
+  }
+  .text h3 {
+    font-family: "Roobert-Regular";
+    font-size: 22px;
+  }
+  .text p {
+    font-family: "Roobert-Regular";
+    font-size: 16px;
+  }
+  .icon-div{
+   height: 85%;
+   width: 110px;
+  }
+  .contact-div h2 {
+    font-family: "BasementGrotesk";
+    font-size: 50px;
     color: white;
     text-align: left;
-    width: 45%;
+    width: 100%;
     position: relative;
-    left: 8%;
-}
-
-.container-1{
-    display: inline-block;
-    position: relative;
-    left: 7.5%;
-    width: 25%;
-    padding: 15px 15px;
-    color: white;
-    font-family: 'HelveticaNowDisplay';
-    margin:10px 10px;
-    background-color: #121222;
-    border-radius: 20px;
-    border:1px solid rgba(255, 255, 255, 0.2);    
-}
-
-.container-2{
-  position: relative;
-  left: 7.5%;
-  display: inline-block;
-  width: 25%;
-  padding: 15px 15px;
-  color: white;
-  font-family: 'HelveticaNowDisplay';
-  margin:10px 10px;
-  background-color: #121222;
-  border:1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 20px;
-}
-.box-medium
-{
-    width:100px;
-    height: 100px;
-    background-color:#7140F2 ;
-    border-radius: 20px;
-}
-.box-instagram
-{
-    width:100px;
-    height: 100px;
-    background-color:#7140F2 ;
-    border-radius: 20px;
-}
-.box-linkedin
-{
-    width:100px;
-    height: 100px;
-    background-color:#7140F2 ;
-    border-radius: 20px;
-}
-.box-dribbble
-{
-    width:100px;
-    height: 100px;
-    background-color:#7140F2 ;
-    border-radius: 20px;
-}
-.box-hireme
-{
-    width:100px;
-    height: 100px;
-    background-color:#7140F2 ;
-    border-radius: 20px;
-}
-.box-email
-{
-    width:100px;
-    height: 100px;
-    background-color:#7140F2 ;
-    border-radius: 20px;
-}
-.flex-box{
-  display: flex;
-  font-family:  'HelveticaNowDisplay';
-  font-size: 1.2em;
-}
-.main-text{
-  color:#A19AB1;
-  padding: 10px 20px;
-}
-
-
-
-
-.medium:hover
-{
-  border:1px solid rgba(255, 255, 255, 0);
-    box-shadow: 0 1px 30px rgba(113, 64, 242, 0.8);
-    cursor: pointer;
-    transition: all 0.2s ease 0s;
-}
-
-.instagram:hover
-{
-  border:1px solid rgba(255, 255, 255, 0);
-  box-shadow: 0 1px 30px rgba(113, 64, 242, 0.8);
-    cursor: pointer;
-    transition: all 0.2s ease 0s;
-}
+    left: 10px;
     
-.linkedin:hover
-{
-  border:1px solid rgba(255, 255, 255, 0);
-  box-shadow: 0 1px 30px rgba(113, 64, 242, 0.8);
-    cursor: pointer;
-    transition: all 0.2s ease 0s;
-}
-    
-.dribbble:hover
-{
-  border:1px solid rgba(255, 255, 255, 0);
-  box-shadow: 0 1px 30px rgba(113, 64, 242, 0.8);
-    cursor: pointer;
-    transition: all 0.2s ease 0s;
-}
-    
-.hireme:hover
-{
-  border:1px solid rgba(255, 255, 255, 0);
-  box-shadow: 0 1px 30px rgba(113, 64, 242, 0.8);
-    cursor: pointer;
-    transition: all 0.2s ease 0s;
-}
-    
-.email:hover
-{
-  border:1px solid rgba(255, 255, 255, 0);
-  box-shadow: 0 1px 30px rgba(113, 64, 242, 0.8);
-    cursor: pointer;
-    transition: all 0.2s ease 0s;
-}
-    
-
-@media (max-width : 1080px) {
-  .container-1{
-   width: 24%;
+    margin-block-start: 0.8em;
+    margin-block-end: 0.5em;
   }
-  .container-2{
-    width: 24%;
-   }
 }
+
+.footer{ 
+
+  position: relative;
+  margin-top: 120px;
+  padding-bottom: 50px;
+  display: flex;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+.footer-left
+
+{position: absolute;
+  font-family: "Roobert-Regular";
+  font-size: calc(0.6vw + 0.4vh + 0.5vmin);
+  
+  color: rgb(187, 184, 214);
+left:0
+}
+.footer-right
+{ position: absolute;
+  font-family: "Roobert-Regular";
+  font-size: calc(0.6vw + 0.4vh + 0.5vmin);
+  color: rgb(187, 184, 214);
+  right: 0;
+}
+
+
+@media (max-width: 480px) {
+  .contact-sub{
+    position: relative;
+    font-family: "Roobert-Regular";
+    left: 10px;
+    color: rgb(187, 184, 214);
+    margin-block-start: 0.1em;
+    margin-block-end: 1.5em;
+    width: 90vw;
+    font-size: 16px;
+  }
+
+  .copy-to-clipboard{
+    width: 70%;
+    right: 10%;
+  }
+  .footer-main {
+    display: flex;
+    flex-direction: column;
+    gap:0px;
+  }
+  .container-1 {
+   min-width: 100%;
+   width:100%;
+   height: 110px;
+   margin-bottom: 10px;
+  }
+  .text{
+    left: 25px;
+  }
+  .text h3 {
+    font-family: "Roobert-Regular";
+    font-size: 22px;
+  }
+  .text p {
+    font-family: "Roobert-Regular";
+    font-size: 18px;
+  }
+  .icon-div{
+   display: none;
+   height: 85%;
+   width: 110px;
+  }
+  .contact-div h2 {
+    font-family: "BasementGrotesk";
+    font-size: 40px;
+    color: white;
+    text-align: left;
+    width: 95%;
+    position: relative;
+    left: 10px;
+    margin-block-start: 0.8em;
+    margin-block-end: 0.5em;
+  }
+  .footer{ 
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    align-items: flex-start;
+    color: #b8abc9;
+  }
+ 
+  .footer-right
+  
+  { position: relative;
+   color: #b8abc9;
+   font-size: 16px;
+  }
+  .footer-left
+  {position: relative;
+   color: #b8abc9;
+   font-size: 16px;
+  }
+  .success-copy{
+    position: relative;
+    background-color: #7140F2;
+    padding:8px 24px;
+    font-size: 18px;
+    font-family: "Roobert-Regular";
+    z-index: 9999;
+    border-radius: 50px;
+    bottom:-40vh;
+    left: 15vh;
+   
+  }
+}
+
+
+

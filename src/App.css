@@ -1,6 +1,9 @@
-
+body{
+    cursor: url("./Assets/cursor.svg"),auto;
+    
+}
     ::-webkit-scrollbar {
-        width: 10px;
+        width: 2px;
 
         background-color: rgba(226, 226, 226, 0.226);
     }
@@ -8,3 +11,9 @@
         background: rgba(180, 166, 214, 0.452);
         border-radius: 10px;
       }
+
+      ::selection {
+        color: #7140f2;
+        background: white;
+      }
+      

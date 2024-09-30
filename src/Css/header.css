@@ -2,6 +2,12 @@
   font-family: "BasementGrotesk";
   src: url(../Assets/Fonts/BasementGrotesque-Black_v1.202.woff2);
 }
+.App {
+  width: 100%;
+  max-width: 80vw;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 html,
 body {
@@ -9,56 +15,163 @@ body {
   background-color: rgb(18, 18, 34);
   height: 100%;
 }
+.hero {
+  position: relative;
+}
 
 .header-text {
   font-family: "BasementGrotesk";
   color: white;
   line-height: 0.3;
   list-style: none;
-  font-size: 3.8rem;
+  font-size: calc(2vw + 2vh + 1vmin);
   position: absolute;
-  margin-left: 5%;
-  top: 12%;
+  top: 15vh;
+  left: 0;
 }
 .product-design-hover {
   width: 80vw;
-  -webkit-transition: all 0.2s ease;
 }
-.product-design-hover:hover #product  {
+.product-design-hover:hover #product {
   text-shadow: 0px 1px 30px rgba(113, 64, 242, 0.7),
     0px 1px 25px rgba(113, 64, 242, 0.7);
-  transition: all 0.2s ease 0s;
-  cursor: none;
+  transition: all 0.2s ease-in-out 0s;
 }
-.product-design-hover:hover #design  {
-    text-shadow: 0px 1px 30px rgba(113, 64, 242, 0.7),
-      0px 1px 25px rgba(113, 64, 242, 0.7);
-    transition: all 0.2s ease 0s;
-    cursor: none;
-  }
-  
-  .product-design-hover:hover .hi-img {
-    transform: scale(2.5);
-    opacity: 1;
-    transition: all 0.2s ease 0s;
-    cursor: none;
-  }
+.product-design-hover:hover #design {
+  text-shadow: 0px 1px 30px rgba(113, 64, 242, 0.7),
+    0px 1px 25px rgba(113, 64, 242, 0.7);
+  transition: all 0.2s ease-in-out 0s;
+}
+
+.product-design-hover:hover .hi-img {
+  transform: scale(2.5);
+  opacity: 1;
+  transition: all 0.2s ease-in-out 0s;
+}
 
 .scroll-img {
   top: 80vh;
-  position: relative;
-  width: 10%;
+  position: absolute;
+  width: 150px;
   float: right;
-  left: 38%;
+  right: 50px;
+}
+.hover-header {
+  position: relative;
+}
+.memoji {
+  width: calc(10vw + 3vh + 1vmin);
+  position: absolute;
+  float: right;
+  right: 16vw;
+  bottom: 50px;
 }
 
 .hi-img {
-  width: 10%;
+  width: 3vw;
   position: absolute;
   float: right;
-  right: 15%;
-  top: 35%;
+  bottom: 50px;
+  right: 10vw;
   opacity: 0;
-  transition: all 0.2s ease-out 0s
- 
+  transition: all 0.2s ease-out 0s;
+}
+.hi-img-2 {
+  display: none;
+}
+
+@media screen and (max-device-width: 1200px) {
+  .memoji {
+    display: none;
+  }
+  .header-text {
+    font-size: calc(2.6em + 1vw);
+    top: 10vh;
+    left: -20px;
+  }
+  .hi-img {
+    display: none;
+  }
+}
+
+@media screen and (max-device-width: 830px) {
+  .App {
+    max-width: 100%;
+    width: 100vw;
+    overflow: hidden;
+  }
+
+  .header-text {
+    font-size: calc(3.5em + 1vw);
+    top: 10vh;
+    left: 0px;
+  }
+  .hi-img {
+    display: none;
+  }
+  .hi-img-2 {
+    display: inline;
+    width: 300px;
+    position: absolute;
+    top: 600px;
+    left: 150px;
+  }
+}
+
+@media screen and (min-device-width: 312px) and (max-device-width: 600px) {
+  .App {
+    width: 95%;
+    max-width: 100vw;
+  }
+  .header {
+    background-color: hotpink;
+  }
+  .header-text {
+    font-size: 7.4vw;
+    top: 15vh;
+    left: -30px;
+  }
+  .scroll-img {
+    top: 650px;
+    position: absolute;
+    width: 100px;
+
+    right: 20px;
+  }
+}
+@media screen and (max-device-width: 602px) {
+  .hi-img-2 {
+    display: inline;
+    width: 200px;
+    left: 80px;
+    top: 45vh;
+  }
+  .product-design-hover:hover .hi-img {
+    display: none;
+  }
+  .scroll-img {
+    display: none;
+  }
+}
+#product {
+  animation: slideUp 0.9s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+#design {
+  animation: slideUp 0.9s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+#making {
+  animation: slideUp 0.9s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+#simple {
+  animation: slideUp 0.9s cubic-bezier(0.65, 0, 0.35, 1) both;
+}
+@keyframes slideUp {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
 }
