@@ -1,20 +1,28 @@
+import React, { useState } from "react";
 import "./App.css";
 import Main from "./App/Main";
-import { BrowserRouter, Route, Routes} from "react-router-dom";
-import Dumpyard from "./App/dumpyard";
-import CaseStudy from "./App/caseStudy";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+
+import About from './App/about'
+import Work from "./App/Work";
+import CaseStudyPage from "./App/caseStudyMain";
+
+
 
 function App() {
+  const [isLoggedIn, setisLoggedIn] = useState(null);
+
   return (
-    <div >
+    <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Main/>} />
-          <Route path="dumpyard" element={<Dumpyard/>} /> 
-          <Route path="case-study/:id" element={<CaseStudy/>} />
-          
+          <Route exact path="/" element={<Main />} />
+          <Route exact path="/test" element={<CaseStudyPage />} />
+          <Route path="/about" element={<About />} />
+          <Route exact path="case-study/:id" element={<CaseStudyPage/>} />
+          <Route path="*" element={<Navigate to="/" />} />
+          <Route exact path="/work" element={<Work />} />
         </Routes>
-    
       </BrowserRouter>
     </div>
   );

@@ -57,32 +57,7 @@
   left: calc(2vw + 1vh + 1vmin);
   
 }
-.button1 {
-  text-decoration: none;
 
-  font-family: "Roobert-Regular";
-  font-size: calc(0.6vw + 0.4vh + 0.5vmin);
-  color: white;
-  border: 1px white solid;
-  padding: 14px 20px;
-  border-radius: 8px;
-  transition: all 0.2s ease 0s;
-}
-.button2 {
-  text-decoration: none;
-  font-family: "Roobert-Regular";
-  font-size: calc(0.6vw + 0.4vh + 0.5vmin);
-  color: white;
-  border: 1px white solid;
-  padding: 14px 20px;
-  border-radius: 8px;
-  transition: all 0.2s ease 0s;
-}
-.button2:hover {
-  color: #7140f2;
-  background-color: white;
- 
-}
 
 .button1:hover {
   color: #7140f2;
@@ -111,17 +86,8 @@
 
 @media screen and (min-device-width: 601px) and (max-device-width: 1210px) {
  
-  .dump-text {
-    top: 5px;
-    font-size: 45px;
-    width: 35%;
-  }
-  .dump-div p {
-    font-size: 16px;
-    width: 40%;
-    top:90px;
-    line-height: 22px !important;
-  }
+ 
+
   .dump-div {
     height: 340px;
     background-color: rgb(113, 64, 242);
@@ -156,7 +122,10 @@
     background-color: rgb(113, 64, 242);
     border-radius: 20px;
   }
-
+.dumpyard p{
+  line-height: calc(1vw + 2vh + 2vmin);
+    font-size: calc(1.5vw + 1vh + 1.55vmin);
+}
 
   .dump-text {
     font-size: calc(2.2em + 1vw);
@@ -189,9 +158,5 @@
     padding: 14px 20px;
     margin-right:15px ;
   }
-  .button2 {
-    font-size: 15px;
-    padding: 14px 20px;
-    margin-right:15px ;
-  }
+ 
 }

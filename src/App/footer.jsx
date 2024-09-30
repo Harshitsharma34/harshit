@@ -2,13 +2,20 @@ import React from "react";
 
 export default function Footer() {
   return (
-    <div className="footer">
-      <div className="footer-left">
-        <p>I Designed and Coded this website from scratch © Harshit Sharma. </p>
-      </div>
+    <div>
+      <hr className="solid"  style={{
+               
+                opacity: 0.2,
 
-      <div className="footer-right">
-        <p>Special mention to <a style={{color:"white", textDecoration:"none"}} href="https://www.instagram.com/snehbagde/">Snehal Bagde</a></p>
+              
+              }}/>
+      <div className="footer">
+        <div className="footer-left">
+          <p>
+            I Designed and Coded this website from scratch © Harshit Sharma.{" "}
+          </p>
+          
+        </div>
       </div>
     </div>
   );

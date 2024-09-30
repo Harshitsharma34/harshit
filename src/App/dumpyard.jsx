@@ -5,10 +5,11 @@ import { Link } from "react-router-dom";
 import Lottie from "lottie-react";
 import Logo from "../Assets/logo.json";
 import Loading from "../Assets/loading.json";
+import Contact from "./contact";
+import Footer from "./footer";
 
 function Dumpyard() {
   const [isLoading, setIsLoading] = useState(false);
-
 
   const apiEndpoint = "https://harshitsharma.prismic.io/api/v2";
   const accessToken =
@@ -19,7 +20,6 @@ function Dumpyard() {
 
   useEffect(() => {
     const fetchData = async () => {
-   
       setIsLoading(true);
       const response = await Client.query(
         Prismic.Predicates.at("document.type", "dumpyard")
@@ -32,25 +32,28 @@ function Dumpyard() {
     fetchData();
   }, []);
 
-
   return (
     <div className="dumpyard-container">
       <div className="nav">
         <div className="navbar-container">
           <div className="logo">
-            <Lottie animationData={Logo} loop={true} />
+            <Link to="/">
+              <Lottie animationData={Logo} loop={true} />
+            </Link>
+
             {/* <img className="logo" src={image} alt="My Happy SVG" /> */}
           </div>
-          <Link className="backtohome" to="/">
-            Back to 🏠{" "}
+          <Link className="backtohome-dump" to="/">
+            Back to Home
           </Link>
         </div>
       </div>
       <div className="dumpyard">
         <h1 className="dumpyard-text">DUMPYARD</h1>
-        <br />
+
         <p>
-          This is where I scribble down my design projects at random. Enjoy!
+          This is where I scribble down my designs at random which didn't make
+          it to the final cut. Enjoy!
           <span> 🚀</span>
         </p>
       </div>
@@ -89,6 +92,8 @@ function Dumpyard() {
           </div>
         ))}
       </div>
+      <Contact />
+      <Footer />
     </div>
   );
 }

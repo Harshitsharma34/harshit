@@ -1,129 +1,60 @@
 import React, { Component, useState } from "react";
 import "../Css/dumpyarddiv.css";
 import "../Css/design-process.css";
-import { Modal } from "react-responsive-modal";
-import divider from "../Assets/divider.svg";
-import CloseButton from "../Assets/Close button2.svg";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 import { Link } from "react-router-dom";
-import dumpyardImage from "../Assets/Dumpyard Image.png";
-import dumpyardImage2 from "../Assets/Dumpyard2.png";
+import icons from "../Assets/second_section.svg";
 
 class DumpardDiv extends Component {
-  state = {
-    open: false,
-  };
-
-  onOpenModal = () => {
-    this.setState({ open: true });
-  };
-
-  onCloseModal = () => {
-    this.setState({ open: false });
-  };
-
   render() {
-    const { open } = this.state;
-
-    const closeIcon = (
-      <svg
-        width="50"
-        height="50"
-        viewBox="0 0 71 71"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle
-          cx="35.5"
-          cy="35.5"
-          r="35.5"
-          fill="#4A4B6A"
-          fill-opacity="0.43"
-        />
-        <path d="M21.0645 21.0645L50 50" stroke="#E1E2FF" stroke-width="5" />
-        <path d="M21.0645 50L50 21.0644" stroke="#E1E2FF" stroke-width="5" />
-      </svg>
-    );
-
     return (
       <div>
-        <section className="dumpyard-sec">
-          <div className="dump-div">
-            <img className="dumpyard-div-img2" src={dumpyardImage2}></img>
-            <div className="dump-content">
-              <h1 className="dump-text">DUMPYARD</h1>
-              <p style={{ lineHeight: "25px" }}>
-                Dumpard is a place where I dump random things related to design world.
-                Hope you'll like it. Click on the button below. 👇
-              </p>
-              <div className="dump-btn">
-                <Link to="/dumpyard" className="button1">
-                  Take a look
-                </Link>
-                <a className="button2" onClick={this.onOpenModal}>
-                  Design Process
-                </a>
-              </div>
-            </div>
-
-            <img className="dumpyard-div-img" src={dumpyardImage}></img>
+        <div className="second-sec">
+          <div className="intentions-head">
+            <h1>
+              Build the World <br />
+              with <span>Intentions</span>
+            </h1>
+            <span className="aim">Aim ✱ Beliefs</span>
           </div>
-        </section>
-        <Modal
-          classNames="design-process-modal"
-          open={open}
-          onClose={this.onCloseModal}
-          showCloseIcon={true}
-          closeIcon={closeIcon}
-        >
-          <h2 className="design-process-heading">DESIGN PROCESS</h2>
-          <div className="process-div1">
-            <img
-              className="design-process-image"
-              src="https://res.cloudinary.com/harshitdesign/image/upload/v1645703832/Design%20Process/Background_nwhy7f.svg"
-              alt="background"
-            />
+          <div className="intentions-para">
+            <img src={icons} />
+            <p>
+              Driven by vision and intention, I focus on purposeful design
+              choices that amplify clarity. Each project tells a story of
+              contrast, evolution, and the connection between product and human
+              experience.
+              <br />
+              <br />I am a firm believer that design is more than just
+              aesthetics. It's about solving problems that others don't have;
+              it's about creating something durable and functional. This makes
+              the difference between good and best-in-class products.
+            </p>
           </div>
-          <div className="process-div1">
-            <img
-              className="design-process-image"
-              src="https://res.cloudinary.com/harshitdesign/image/upload/v1645702421/Design%20Process/Conflict_rleehb.svg"
-              alt="Conflict"
-            />
+        </div>
+        <div className="custom-border"></div>
+        <div className="numbers">
+          <div className="number 1" style={{width:"50%"}}>
+            <span>4.5+</span>
+            <br />
+            <p>years of Total Experience</p>
           </div>
-          <div className="process-div1">
-            <img
-              className="design-process-image"
-              src="https://res.cloudinary.com/harshitdesign/image/upload/v1645702420/Design%20Process/Rising_action_ksmvvr.svg"
-              alt="Rising_Action"
-            />
+          <div className="number 2">
+            <span>30+</span> <br />
+            <p>Completed Projects</p>
           </div>
-          <div className="process-div1">
-            <img
-              className="design-process-image"
-              src="https://res.cloudinary.com/harshitdesign/image/upload/v1645703831/Design%20Process/Climax_pcl41m.svg"
-              alt="Climax"
-            />
+          <div className="number 3">
+            <span>13</span>
+            <br />
+            <p>Satisfied Client</p>
           </div>
-          <div className="process-div1">
-            <img
-              className="design-process-image"
-              src="https://res.cloudinary.com/harshitdesign/image/upload/v1645702420/Design%20Process/Falling_Action_n72c3u.svg"
-              alt="Falling_Action"
-            />
+          <div className="number 4" style={{width:"50%"}}>
+            <span>0</span>
+            <br />
+            <p>Days without a creative crisis</p>
           </div>
-          <div className="process-close">
-            <img className="divider" src={divider} alt="divider" />
-            <a className="closeButton" onClick={this.onCloseModal}>
-              Close
-              <img
-                className="closeButton2"
-                src={CloseButton}
-                alt="close"
-                style={{ color: "white" }}
-              />
-            </a>
-          </div>
-        </Modal>
+        </div>
       </div>
     );
   }

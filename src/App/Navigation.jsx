@@ -1,77 +1,53 @@
-
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link, animateScroll as scroll } from "react-scroll";
 import Lottie from "lottie-react";
-import Logo from "../Assets/logo.json";
+import Logo from "../Assets/logo_harshit.svg";
+import Text from "../Assets/text.svg";
+import Text2 from "../Assets/text-nav2.svg";
 import "../Css/Nav.css";
 
+
+
 function Nav() {
-  
-
+  const [colorChange, setColorchange] = useState(false);
+  const changeNavbarColor = () => {
+    if (window.scrollY >= 80) {
+      setColorchange(true);
+    } else {
+      setColorchange(false);
+    }
+  };
+  window.addEventListener("scroll", changeNavbarColor);
   return (
-    <div className="nav">
-      <div className="navbar-container">
-        <div
-          className="logo"
-
-        >
-         <Lottie animationData={Logo} loop= {true}/> 
-          {/* <img className="logo" src={image} alt="My Happy SVG" /> */}
-        </div>
+    <div className={colorChange ? 'nav colorChange' : 'nav'}>
+      <div className="navbar-container-nav">
         <ul className="nav-list">
-          <li>
-            <Link
-              activeClass="active"
-              to="dumpyard"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={1000}
+          <a
+            className="work"
+            style={{ textDecoration: "none", color: "white" }}
+            href="/"
+          >
+            <img className="logo" src={Logo} />
+          </a>
+
+          {/* <li>
+            <a
+              className="work"
+              style={{ textDecoration: "none", color: "white" }}
+              href="/work"
             >
-              <a
-                className="dumpyard"
-                style={{ textDecoration: "none", color: "white" }}
-                href="#"
-              >
-                Dumpyard
-              </a>
-            </Link>
-          </li>
+              Work,
+            </a>
+          </li> */}
+          <li></li>
           <li>
-            <Link
-              activeClass="active"
-              to="work"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={1000}
+            <a
+              className="about"
+              style={{ textDecoration: "none", color: "white" }}
+              href="/about"
             >
-              <a
-                className="work"
-                style={{ textDecoration: "none", color: "white" }}
-                href="#"
-              >
-                Work
-              </a>
-            </Link>
-          </li>
-          <li>
-            <Link
-              activeClass="active"
-              to="about"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={1000}
-            >
-              <a
-                className="about"
-                style={{ textDecoration: "none", color: "white" }}
-                href="#"
-              >
-                About
-              </a>
-            </Link>
+              About,
+            </a>
           </li>
           <li>
             <Link
@@ -87,11 +63,21 @@ function Nav() {
                 style={{ textDecoration: "none", color: "white" }}
                 href="#"
               >
-                Let's Connect
+              Contact
               </a>
             </Link>
           </li>
         </ul>
+        <img className="text-nav" src={Text} />
+        <img className="text-nav2" src={Text2} />
+      </div>
+      <div className="break-nav">
+        <hr
+          className="solid"
+          style={{
+            opacity: 1,
+          }}
+        />
       </div>
     </div>
   );

@@ -1,53 +1,143 @@
 import "../Css/header.css";
-import scroll from "../Assets/scroll.svg";
-import hithere from "../Assets/hithere.svg";
-import memoji from "../Assets/memoji.png";
+import { Fade } from "react-awesome-reveal";
+import { Carousel } from "react-responsive-carousel";
 
 function Header() {
   return (
     <div className="hero">
-      <div>
-        <ul className="header-text">
-          <img className="hi-img-2" src={memoji}></img>
-          <li>
-            <h1
-              id="making"
-              style={{
-                WebkitTextStrokeWidth: "1px",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              MAKING
+      <div className="marquee-container">
+        <div class="marquee">
+          <p>
+            <h1>
+             
+            ✹   
+              <span
+                style={{
+                  WebkitTextStroke: "2px white",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                {" "}Making
+              </span>
+              &nbsp; Product &nbsp; Design &nbsp;
+              <span
+                style={{
+                  WebkitTextStroke: "2px white ",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                Simple &nbsp;
+              </span>
+              ✹{" "} 
             </h1>
-          </li>
+            <h1></h1>
+          </p>
+          <p>
+            <h1>
+           
+              <span
+                style={{
+                  WebkitTextStroke: "2px white ",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                &nbsp;Making
+              </span>
+              &nbsp; Product &nbsp; Design &nbsp;
+              <span
+                style={{
+                  WebkitTextStroke: "2px white ",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                Simple &nbsp;
+              </span>
+            </h1>
+          </p>
+          <p>
+            <h1>
+             
+            ✹{" "} 
+              <span
+                style={{
+                  WebkitTextStroke: "2px white",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                Making
+              </span>
+              &nbsp; Product &nbsp; Design &nbsp;
+              <span
+                style={{
+                  WebkitTextStroke: "2px white ",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                Simple &nbsp;
+              </span>
+              ✹{" "}
+            </h1>
+            <h1></h1>
+          </p>
+          <p>
+            <h1>
+           
+              <span
+                style={{
+                  WebkitTextStroke: "2px white ",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                &nbsp;Making
+              </span>
+              &nbsp; Product &nbsp; Design &nbsp;
+              <span
+                style={{
+                  WebkitTextStroke: "2px white ",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                Simple &nbsp;
+              </span>
+            </h1>
+          </p>
+        </div>
+       
+      </div>
 
-          <div className="product-design-hover">
-            <li>
-              <h1 id="product">PRODUCT</h1>
-            </li>
-            <li>
-              <h1 id="design">DESIGN</h1>
-            </li>
-            <div className="hover-header">
-            <img className="memoji" src={memoji}></img>
-              <img className="hi-img" src={hithere}></img>
-            </div>
+      <div className="header-para">
+        <p>
+          Hello There! I’m a{" "}
+          <span style={{ color: "#ECFF7B" }}>Product Designer </span> based in
+          India and currently working for{" "}
+          <span style={{ color: "#ECFF7B" }}>Little Planet Design Studio </span>{" "}
+          to create experiences that shape the future of web.
+        </p>
+      </div>
+      <div className="dump-sec">
+        <Carousel
+          showArrows={true}
+          autoPlay={0.5}
+          infiniteLoop={true}
+          showStatus={false}
+          showIndicators={false}
+          swipeable={true}
+          showThumbs={false}
+          stopOnHover={false}
+        >
+          <div className="dump-image-2">
+            <h2 className="assembly">Assembly</h2>
+            <img className="work-image-image" src={dump1} />
           </div>
-
-          <li>
-            <h1
-              id="simple"
-              style={{
-                WebkitTextStrokeWidth: "1px",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              SIMPLE
-            </h1>
-          </li>
-        </ul>
-
-        <img className="scroll-img" src={scroll}></img>
+          <div className="dump-image-2">
+            <h2 className="assembly-2">Multi-Disciplinary</h2>
+            <img className="work-image-image" src={dump2} />
+          </div>
+          <div className="dump-image-2">
+            <h2 className="assembly-3">Inclusivity</h2>
+            <img className="work-image-image" src={dump3} />
+          </div>
+        </Carousel>
       </div>
     </div>
   );
